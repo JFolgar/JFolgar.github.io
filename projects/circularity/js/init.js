@@ -33,7 +33,7 @@ var init = function (window) {
         };
 
         // TODO 7 : Create a Loop to call drawCircle 100 times
-        for (var counter = 0; counter < 200; counter++) {
+        for (var counter = 0; counter < 100; counter++) {
             drawCircle(circle);
         }
     
@@ -48,16 +48,16 @@ var init = function (window) {
                 circle.x = 0 - circle.radius;
             } 
             // TODO 5a) if the circle has gone out of the left side of the screen then place it off-screen right
-               else if ( circle.x < 0 - circle.radius ) {
-                 circle.x =  canvas.width + circle.radius;
+               else if ( circle.x < canvas.width + circle.radius ) {
+                 circle.x = canvas.width - circle.radius;
              }
 
-             // TODO 5b) if the circle has gone out of the top side of the screen then place it off-screen bottom
-             if ( circle.y < 0 - circle.radius ) {
-                 circle.y = canvas.height + circle.radius;
+              TODO 5b) if the circle has gone out of the top side of the screen then place it off-screen bottom
+             if ( circle.y > 0 + circle.radius ) {
+                circle.y = canvas.height - circle.radius;
              }
-             // TODO 5c) if the circle has gone out of the bottom side of the screen then place it off-screen top 
-             else if ( circle.y > canvas.height + circle.radius ) {
+            TODO 5c) if the circle has gone out of the bottom side of the screen then place it off-screen top 
+            else if ( circle.y > canvas.height + circle.radius ) {
                 circle.y = 0 - circle.radius;
             }
             // YOUR TODO 5 CODE ENDS HERE //////////////////////////
